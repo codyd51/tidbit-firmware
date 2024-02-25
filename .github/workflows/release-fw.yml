@@ -22,7 +22,7 @@ jobs:
         with:
           name: precompiled-firmware-files
           path: |
-            qmk_firmware/nullbitsco_*.hex
+            qmk_firmware/nullbitsco_*
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%m/%d/%Y')"
@@ -37,7 +37,7 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "qmk_firmware/nullbitsco_*.hex"
+          artifacts: "qmk_firmware/nullbitsco_*"
           allowUpdates: true
           artifactErrorsFailBuild: true
           body: ${{ steps.release_text.outputs.release_text }}
