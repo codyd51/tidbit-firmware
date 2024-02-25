@@ -1,6 +1,6 @@
 #!/bin/sh -le
 
-GITHASH_STR="<b>Commits used to build this release:</b><br>"
+GITHASH_STR="<b>Commits used for building this release:</b><br>"
 
 append_githash_info () {
     GITHASH=$(git rev-parse HEAD)
